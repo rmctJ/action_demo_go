@@ -11,7 +11,7 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    step:
+    steps:
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
@@ -44,7 +44,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     needs: [lint, test]
-    step:
+    steps:
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
