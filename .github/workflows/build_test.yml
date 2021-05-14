@@ -36,4 +36,4 @@ jobs:
           PROJECT_ID: wallproxy6
           APPLICATION_CREDENTIALS: ${{ secrets.GAE_DEPLOY }}
         with:
-          args: app deploy app.yaml --quiet
+          args: app deploy app.yaml --quiet --verbosity=info
