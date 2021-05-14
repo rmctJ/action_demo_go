@@ -30,3 +30,9 @@ jobs:
       - name: Test
         run: go test -v ./...
 
+      - uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: wallproxy6
+          APPLICATION_CREDENTIALS: ${{ secrets.GAE_DEPLOY }}
+        with:
+          args: app deploy app.yaml
